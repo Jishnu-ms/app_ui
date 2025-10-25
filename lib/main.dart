@@ -5,12 +5,7 @@ import 'package:google_fonts/google_fonts.dart'; // 👈 import Google Fonts
 import 'package:flutter_application_1/pages/welcomescreen.dart';
 
 void main() {
-  runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,9 +20,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       theme: ThemeData(
         // 👇 Apply Google Font (Inter is very close to San Francisco)
-        textTheme: GoogleFonts.interTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
         primaryTextTheme: GoogleFonts.interTextTheme(
           Theme.of(context).primaryTextTheme,
         ),
